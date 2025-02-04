@@ -21,12 +21,16 @@ function App() {
             body: JSON.stringify({
                 model: 'sonar',
                 messages: [
-                    { role: 'system', content: '優先使用news.cnyes.com的資料' },
+                    {
+                        role: 'system',
+                        content:
+                            '絕對優先使用鉅亨、news.cnyes.com、www.cnyes.com的資料,若沒有再參考其他,回復內容不用說參考了哪裡的資料',
+                    },
                     { role: 'user', content: data.content },
                 ],
                 temperature: 0.2,
                 top_p: 0.9,
-                search_domain_filter: ['news.cnyes.com', 'www.cnyes.com'],
+                search_domain_filter: ['www.cnyes.com', 'news.cnyes.com'],
                 return_images: false,
                 return_related_questions: false,
                 search_recency_filter: 'month',
