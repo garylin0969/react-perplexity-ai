@@ -58,7 +58,9 @@ export default function App() {
         <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
             <div className="flex-1 container mx-auto px-4 flex flex-col justify-center">
                 <div className="space-y-6">
-                    <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white">Perplexity AI Chat</h1>
+                    <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
+                        Perplexity AI Concat
+                    </h1>
 
                     <div className="relative">
                         <input
