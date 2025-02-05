@@ -19,7 +19,7 @@ export const Footer = () => {
                     <div className="text-sm text-gray-600 dark:text-gray-400">
                         Developed by{' '}
                         <a
-                            href="https://github.com/garylin0969"
+                            href="https://github.com/garylin0969/react-perplexity-concat"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-500 hover:text-blue-600 transition-colors font-medium hover:underline"
