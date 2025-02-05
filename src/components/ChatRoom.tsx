@@ -13,12 +13,12 @@ export const ChatRoom = ({ messages, onSendMessage, isConfigValid }: Props) => {
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
-    const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
-
     useEffect(() => {
-        scrollToBottom();
+        // 確保只在聊天內容區域內滾動
+        const chatContainer = messagesEndRef.current?.closest('.chat-container');
+        if (chatContainer) {
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
     }, [messages]);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -67,7 +67,7 @@ export const ChatRoom = ({ messages, onSendMessage, isConfigValid }: Props) => {
                 <h2 className="text-xl font-semibold text-white">聊天室</h2>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar chat-container">
                 {messages.map((message, index) => (
                     <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                         <div
