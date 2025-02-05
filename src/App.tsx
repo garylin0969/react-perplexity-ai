@@ -58,6 +58,7 @@ function App() {
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="w-1/2">
+                <h1 className="m-4 text-center font-bold text-2xl">Perplexity</h1>
                 <form className="flex flex-col gap-y-4" onSubmit={handleSubmit(onSubmit)}>
                     <textarea
                         rows={3}
