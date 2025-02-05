@@ -114,7 +114,7 @@ export const ChatRoom = ({ messages, onSendMessage, isConfigValid }: Props) => {
                                  disabled:bg-gray-600 disabled:cursor-not-allowed
                                  transition-colors duration-200"
                     >
-                        {isLoading ? '等待回應...' : '發送'}
+                        發送
                     </button>
                 </form>
             </div>
