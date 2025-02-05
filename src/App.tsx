@@ -8,7 +8,7 @@ function App() {
 
     const { register, handleSubmit } = useForm();
 
-    const onSubmit = (data: FieldValues) => {
+    const onSubmit = async (data: FieldValues) => {
         console.log(data);
 
         if (!data.content) {
@@ -42,7 +42,7 @@ function App() {
             }),
         };
 
-        fetch('https://api.perplexity.ai/chat/completions', options)
+        await fetch('https://api.perplexity.ai/chat/completions', options)
             .then((response) => response.json())
             .then((response) => {
                 console.log(response);
@@ -59,7 +59,8 @@ function App() {
         <div className="flex justify-center items-center h-screen">
             <div className="w-1/2">
                 <form className="flex flex-col gap-y-4" onSubmit={handleSubmit(onSubmit)}>
-                    <input
+                    <textarea
+                        rows={3}
                         className="border w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-xs"
                         {...register('content')}
                     />
