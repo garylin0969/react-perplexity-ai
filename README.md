@@ -6,7 +6,7 @@
 
 -   React.js
 -   TypeScript
--   TailwindCSS
+-   Tailwind CSS
 -   Perplexity
 -   React Hook Form
 -   React Json View
