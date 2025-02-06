@@ -7,7 +7,7 @@
 -   React.js
 -   TypeScript
 -   TailwindCSS
--   GoogleAnalytics
+-   Perplexity
 -   React Hook Form
 -   React Json View
 -   GitHub Actions for CI/CD
